@@ -1,0 +1,186 @@
+:root {
+  --font-scale: 1rem;
+  --bg-color: #f4f5f7;
+  --card-bg: #ffffff;
+  --text-color: #222222;
+  --text-muted: #555555;
+  --primary-color: #00407a;
+  --primary-hover: #002b54;
+  --border-color: #e0e0e0;
+}
+
+/* Modo Alto Contraste */
+body.alto-contraste {
+  --bg-color: #000000;
+  --card-bg: #121212;
+  --text-color: #ffffff;
+  --text-muted: #dddddd;
+  --primary-color: #ffff00;
+  --primary-hover: #ffd700;
+  --border-color: #ffffff;
+}
+
+body.alto-contraste .btn-read-more,
+body.alto-contraste .accessibility-controls button {
+  background-color: #ffff00;
+  color: #000000;
+  font-weight: bold;
+}
+
+body.alto-contraste a {
+  color: #ffff00;
+}
+
+/* Estilos Gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-scale);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Cabeçalho e Acessibilidade */
+.header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.accessibility-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.accessibility-controls button {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.accessibility-controls button:focus-visible,
+.btn-read-more:focus-visible,
+.nav a:focus-visible {
+  outline: 3px solid #ff9900;
+  outline-offset: 2px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* Conteúdo Principal / Cards */
+.main-content {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.card-figure {
+  margin-bottom: 15px;
+}
+
+.card-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.card-caption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 8px;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn-read-more {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-read-more:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Rodapé */
+.footer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: var(--text-color);
+}
